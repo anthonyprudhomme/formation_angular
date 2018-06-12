@@ -18,7 +18,6 @@ export class RecipeComponent implements OnInit {
 
   seeMore() {
     this.expanded = !this.expanded;
-
   }
 
 }

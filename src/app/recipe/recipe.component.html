@@ -1,12 +1,9 @@
-
-
 <mat-card class="example-card">
   <mat-card-header>
     <div mat-card-avatar class="example-header-image">
-        <img [src]="recipe.picture">
+      <img [src]="recipe.picture">
     </div>
     <mat-card-title>{{ recipe.name }}</mat-card-title>
-    <mat-card-subtitle>{{ recipe.name }}</mat-card-subtitle>
   </mat-card-header>
   <img mat-card-image [src]="recipe.picture" alt="{{ recipe.name }}">
   <mat-card-content>
@@ -14,8 +11,11 @@
       {{ recipe.description }}
     </p>
     <ul *ngIf="this.expanded">
-      <li *ngFor=" let ingredient of recipe.ingredients" >
+      <li *ngFor=" let ingredient of recipe.ingredients">
         {{ingredient.quantity}} {{ingredient.unit}} de {{ingredient.name}}
+      </li>
+      <li *ngFor=" let instruction of recipe.instructions">
+        {{instruction}}
       </li>
     </ul>
   </mat-card-content>
