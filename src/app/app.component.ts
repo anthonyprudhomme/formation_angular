@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
-import {RECIPES} from './recipe/recipes.mock';
+import { Component, OnInit } from '@angular/core';
+import { RecipeService } from './recipe/recipe.service';
+import { Recipe } from './recipe/recipe.model';
 
 @Component({
   selector: 'app-root',
@@ -7,6 +8,5 @@ import {RECIPES} from './recipe/recipes.mock';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'Anthony\'s app';
-  recipes = RECIPES;
+
 }

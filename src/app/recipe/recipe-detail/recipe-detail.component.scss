@@ -15,8 +15,10 @@
   height: 80px;
 }
 
-.squared {
-  object-fit: cover;
-  width:300px;
-  height:300px;
+.container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 64px)
 }
+

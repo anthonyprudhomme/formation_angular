@@ -10,14 +10,9 @@ import { callLifecycleHooksChildrenFirst } from '@angular/core/src/view/provider
 })
 export class RecipeComponent implements OnInit {
   @Input() recipe: Recipe;
-  expanded: boolean;
   constructor() { }
 
   ngOnInit() {
-  }
-
-  seeMore() {
-    this.expanded = !this.expanded;
   }
 
 }
