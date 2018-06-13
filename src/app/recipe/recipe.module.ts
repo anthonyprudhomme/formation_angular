@@ -9,13 +9,15 @@ import { HttpClientModule } from '@angular/common/http';
 import { RecipeDetailComponent } from './recipe-detail/recipe-detail.component';
 import { RouterModule } from '@angular/router';
 import { RecipeCreateComponent } from './recipe-create/recipe-create.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   imports: [
     CommonModule,
     CustomMaterialModule,
     HttpClientModule,
-    RouterModule
+    RouterModule,
+    FormsModule
   ],
   declarations: [
     RecipeComponent,

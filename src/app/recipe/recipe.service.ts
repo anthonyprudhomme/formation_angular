@@ -2,6 +2,9 @@ import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { Recipe } from './recipe.model';
 import { HttpClient } from '@angular/common/http';
+import { stringify } from '@angular/compiler/src/util';
+import { HttpHeaders } from '@angular/common/http';
+import { Ingredient } from './ingredient.model';
 
 
 
@@ -20,5 +23,13 @@ export class RecipeService {
 
   getRecipe(id: string): Observable<Recipe> {
     return this.http.get<Recipe>(`${ this._baseUrl }/${ id }`);
+  }
+
+  postRecipe(recipe: Recipe) {
+    this.http.post(this._baseUrl, recipe).subscribe(
+      result => {console.log(result); },
+      err => console.log(err),
+      () => console.log('Fetching complete for Server Metrics')
+    );
   }
 }

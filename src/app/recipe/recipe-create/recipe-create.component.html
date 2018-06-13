@@ -1,15 +1,26 @@
-<div class="example-container">
-  <mat-form-field>
-    <input matInput placeholder="Name of your recipe">
-  </mat-form-field>
+<div class="container">
+  <mat-card class="example-card">
+    <h1>Recipe creation</h1>
 
-  <mat-form-field>
-    <input  matInput placeholder="Url to the picture of your recipe" >
-  </mat-form-field>
+        <mat-form-field>
+          <label for="name">Name</label>
+          <input matInput placeholder="Name of your recipe" [(ngModel)]="recipe.name">
+        </mat-form-field>
 
-  <mat-form-field>
-    <textarea matInput placeholder="Description of your recipe"></textarea>
-  </mat-form-field>
+        <mat-form-field>
+          <label for="url">Url to your recipe image</label>
+          <input  matInput placeholder="Url to the picture of your recipe" [(ngModel)]="recipe.picture">
+        </mat-form-field>
 
+        <mat-form-field>
+          <label for="description">Description</label>
+          <textarea matInput placeholder="Description of your recipe" [(ngModel)]="recipe.description"></textarea>
+        </mat-form-field>
+        <div *ngIf="recipe.description"> Desc:{{recipe.description}}</div>
+
+
+        <button type="submit" class="btn btn-success" (click)="createRecipe()" >Submit</button>
+
+    </mat-card>
 </div>
 
