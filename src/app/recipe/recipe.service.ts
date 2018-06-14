@@ -28,8 +28,18 @@ export class RecipeService {
   postRecipe(recipe: Recipe) {
     this.http.post(this._baseUrl, recipe).subscribe(
       result => {console.log(result); },
-      err => console.log(err),
-      () => console.log('Fetching complete for Server Metrics')
+      err => console.log(err)
     );
+  }
+
+  updateRecipe(recipe: Recipe) {
+    this.http.post(this._baseUrl, recipe).subscribe(
+      result => {console.log(result); },
+      err => console.log(err)
+    );
+  }
+
+  deleteRecipe(recipe: Recipe): Observable<Object> {
+    return this.http.delete(`${ this._baseUrl }/${ recipe.id }`);
   }
 }

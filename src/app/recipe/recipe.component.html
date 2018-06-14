@@ -9,5 +9,8 @@
   <img mat-card-image class="squared" [src]="recipe.picture" alt="{{ recipe.name }}">
   <mat-card-actions>
     <button mat-raised-button color="primary" [routerLink]="['/recipe',this.recipe.id]">See details </button>
+    <button mat-raised-button color="primary" [routerLink]="['/recipe/update',this.recipe.id]">Update </button>
+    <button mat-raised-button color="primary" (click)="deleteRecipe(recipe)">Delete </button>
   </mat-card-actions>
+
 </mat-card>

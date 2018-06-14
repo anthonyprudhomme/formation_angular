@@ -10,6 +10,9 @@ import { RecipeDetailComponent } from './recipe-detail/recipe-detail.component';
 import { RouterModule } from '@angular/router';
 import { RecipeCreateComponent } from './recipe-create/recipe-create.component';
 import { FormsModule } from '@angular/forms';
+import { OrderByPipe } from './order-by.pipe';
+import { ReactiveFormsModule } from '@angular/forms';
+import { RecipeUpdateComponent } from './recipe-update/recipe-update.component';
 
 @NgModule({
   imports: [
@@ -17,14 +20,17 @@ import { FormsModule } from '@angular/forms';
     CustomMaterialModule,
     HttpClientModule,
     RouterModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   declarations: [
     RecipeComponent,
     StrToArrayPipe,
     RecipesComponent,
     RecipeDetailComponent,
-    RecipeCreateComponent
+    RecipeCreateComponent,
+    OrderByPipe,
+    RecipeUpdateComponent
   ],
   providers: []
 })

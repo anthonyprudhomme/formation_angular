@@ -8,12 +8,14 @@ import { AppRoutingModule } from './/app-routing.module';
 import { CustomMaterialModule } from './custom-material/custom-material.module';
 import { RecipeModule} from './recipe/recipe.module';
 import { RouterModule} from '@angular/router';
+import { HighlightDirective } from './highlight.directive';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent
+    HeaderComponent,
+    HighlightDirective
   ],
   imports: [
     BrowserModule,
